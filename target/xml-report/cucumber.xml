@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="1.376" tests="2" skipped="0" failures="0" errors="0">
+<testcase classname="" name="" time="0.977">
+<system-out><![CDATA[
+Given Kullanici "jPHBaseUrl" base URL'ini kullanir..........................passed
+Then Path parametreleri icin "posts/44" kullanir............................passed
+And jPH server a GET request gonderir ve testleri yapmak icin response degerini kaydeder.passed
+Then jPH respons'da status degerinin 200....................................passed
+And jPH respons'da content type degerinin "application/json; charset=utf-8".passed
+Then jPH GET respons body'sinde "userId" degerinin Integer 5................passed
+And jPH GET respons body'sinde "title" degerinin String "optio dolor molestias sit".passed
+]]></system-out>
+</testcase>
+<testcase classname="" name="" time="0.321">
+<system-out><![CDATA[
+Given Kullanici "jPHBaseUrl" base URL'ini kullanir..........................passed
+Then Path parametreleri icin "posts/70" kullanir............................passed
+And POST request icin "Ahmet","Merhaba",10 70 bilgileri ile request body olusturur.passed
+And jPH server a POST request gonderir ve testleri yapmak icin response degerini kaydeder.passed
+Then jPH respons'da status degerinin 200....................................passed
+And jPH respons'da content type degerinin "application/json; charset=utf-8".passed
+And jPH respons daki "Connection" header degerinin "keep-alive".............passed
+Then response attribute degerlerinin "Ahmet","Merhaba",10 70................passed
+]]></system-out>
+</testcase>
+</testsuite>
